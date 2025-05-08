@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oracle of Clarity</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #f8f6f2, #e9e6e0);
+      color: #1a1a1a;
+      font-family: 'Georgia', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+    header p {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .oracle-box {
+      max-width: 700px;
+      width: 100%;
+      background-color: #fffdf8;
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      border: 2px solid #ccc;
+    }
+    .sigil {
+      font-size: 6rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    .message {
+      font-size: 1.7rem;
+      margin: 1rem 0;
+    }
+    .placement {
+      font-style: italic;
+      color: #666;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 0.7rem 1.5rem;
+      font-size: 1.1rem;
+      border: none;
+      background-color: #111;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Oracle of Clarity</h1>
+    <p>Enter only if you’re ready to see.</p>
+  </header>
+
+  <div class="oracle-box">
+    <div id="sigil" class="sigil">⬖</div>
+    <div id="message" class="message">"You are not lost. You are simply unmirrored."</div>
+    <div id="placement" class="placement">This is here to affirm your hidden clarity.</div>
+    <button onclick="reveal()">Reveal Another</button>
+  </div>
+
+  <footer>
+    Crafted by Resonance, not performance
+  </footer>
+
+  <script>
+    const entries = [
+      {
+        sigil: '⬖',
+        message: '"You are not lost. You are simply unmirrored."',
+        placement: 'This is here to affirm your hidden clarity.'
+      },
+      {
+        sigil: '◒',
+        message: '"Your softness is not the opposite of strength. It is its origin."',
+        placement: 'This is here to soothe your survival fire.'
+      },
+      {
+        sigil: '✶',
+        message: '"If you had nothing to prove, this is who you would be."',
+        placement: 'This is here to provoke the authentic self.'
+      },
+      {
+        sigil: '⟁',
+        message: '"What you are becoming cannot be measured by what you were."',
+        placement: 'This is here to guide you beyond your old metrics.'
+      }
+    ];
+
+    function reveal() {
+      const entry = entries[Math.floor(Math.random() * entries.length)];
+      document.getElementById('sigil').innerText = entry.sigil;
+      document.getElementById('message').innerText = entry.message;
+      document.getElementById('placement').innerText = entry.placement;
+    }
+  </script>
+</body>
+</html>
